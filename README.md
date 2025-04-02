@@ -27,9 +27,8 @@ target_link_libraries(YOUR_TARGET PUBLIC stb::image)
 
 This list gives an overview of the currently supported libraries.
 The libraries currently not supported by the wrapper are the ones needing additional defines to work (textedit, voxel_render, tilemap_editor, connected_components).
-In addition, the vorbis library is currently not supported as it is a .c file but somehow acts as a header and I currently do not want look into it how it actually works.
 
-- [ ] [stb::vorbis](https://github.com/nothings/stb/blob/master/stb_vorbis.c)
+- [x] [stb::vorbis](https://github.com/nothings/stb/blob/master/stb_vorbis.c)
 - [x] [stb::hexwave](https://github.com/nothings/stb/blob/master/stb_hexwave.h)
 - [x] [stb::image](https://github.com/nothings/stb/blob/master/stb_image.h)
 - [x] [stb::truetype](https://github.com/nothings/stb/blob/master/stb_truetype.h)
