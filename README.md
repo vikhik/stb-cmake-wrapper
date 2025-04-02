@@ -6,7 +6,7 @@ This wrapper creates cmake targets for each library that takes care of adding th
 
 ## Fork
 
-This is a fork to update the version of `stb`, fix some minor documentation issues, and update the cmake min target in the era of CMake 4.0 deprecating older versions. No other changes will be made (extending support to other libraries, etc.).
+This is a fork to update the version of `stb`, fix some minor documentation issues, and update the cmake min target in the era of CMake 4.0 deprecating older versions.
 
 ## Consuming this library in cmake
 
