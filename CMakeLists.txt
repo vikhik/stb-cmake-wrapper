@@ -52,7 +52,7 @@ function(add_stb_library)
   else()
     # There are a LOT of warnings with gcc/clang, so just disable them all...
     # We _trust_ stb, right?
-    target_compile_options(${target_name} PRIVATE -w)
+    target_compile_options(${target_name} PRIVATE -w -Wno-incompatible-function-pointer-types)
   endif()
 
   target_compile_features(${target_name} PRIVATE c_std_11)
