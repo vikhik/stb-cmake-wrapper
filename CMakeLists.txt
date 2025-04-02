@@ -46,10 +46,13 @@ function(add_stb_library)
 
   if (MSVC)
     # Suppress known warnings for MSVC (W4 has too many to bother with)
+    # This, as of April 2025, compiles with no warnings at all
     target_compile_options(${target_name} PRIVATE /W3 /WX /permissive- /wd4244)
     target_compile_definitions(${target_name} PRIVATE _CRT_SECURE_NO_WARNINGS)
   else()
-    target_compile_options(${target_name} PRIVATE -Wall -Wextra -pedantic -Werror)
+    # There are a LOT of warnings with gcc/clang, so just disable them all...
+    # We _trust_ stb, right?
+    target_compile_options(${target_name} PRIVATE -w)
   endif()
 
   target_compile_features(${target_name} PRIVATE c_std_11)
